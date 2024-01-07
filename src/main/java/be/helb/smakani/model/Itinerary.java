@@ -3,7 +3,7 @@ package be.helb.smakani.model;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -15,14 +15,14 @@ public class Itinerary {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
 
-    private LocalDateTime departureDate;
-    private LocalDateTime returnDate;
+    private LocalDate departureDate;
+    private LocalDate returnDate;
 
     @ManyToOne
     @JoinColumn(name = "traveler_id")
     private Traveler travelerId;
 
-    public Itinerary(Long id, LocalDateTime departureDate, LocalDateTime returnDate, Traveler travelerId, List<Flight> flights) {
+    public Itinerary(Long id, LocalDate departureDate, LocalDate returnDate, Traveler travelerId, List<Flight> flights) {
         this.id = id;
         this.departureDate = departureDate;
         this.returnDate = returnDate;

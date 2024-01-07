@@ -20,6 +20,9 @@ public class Traveler {
     @Column(name = "first_name", nullable = false, length = 20)
     private String firstName;
 
+    @Column(nullable = false, length = 50)
+    private String email;
+
     @OneToMany(mappedBy = "traveler")
     List<CheckIn> checkIns;
 
