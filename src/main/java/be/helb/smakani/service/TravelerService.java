@@ -1,8 +1,7 @@
 package be.helb.smakani.service;
 
-import be.helb.smakani.dao.TravelerRepository;
+import be.helb.smakani.Repository.TravelerRepository;
 import be.helb.smakani.model.Traveler;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -27,8 +26,6 @@ public class TravelerService {
     public void delete(Long id) {
         travelerRepository.deleteById(id);
     }
-
-
 
     public Traveler save(Traveler traveler) {
         return travelerRepository.save(traveler);

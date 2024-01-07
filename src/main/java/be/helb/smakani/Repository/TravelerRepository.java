@@ -1,6 +1,5 @@
-package be.helb.smakani.dao;
+package be.helb.smakani.Repository;
 
-import be.helb.smakani.model.Flight;
 import be.helb.smakani.model.Traveler;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

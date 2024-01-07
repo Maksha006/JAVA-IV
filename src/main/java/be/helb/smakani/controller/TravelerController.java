@@ -26,13 +26,13 @@ public class TravelerController {
         return travelerService.findAll();
     }
 
-    @GetMapping("/traveler")
+    @GetMapping("/traveler/Firstname")
     public Traveler findTravelerByFirstName(@RequestParam String firstname) {
 
         return travelerService.findByFirstName(firstname);
     }
 
-    @GetMapping("/traveler")
+    @GetMapping("/traveler/lastname")
     public Traveler findTravelerByLastName(@RequestParam String lastname) {
 
         return travelerService.findByLastName(lastname);
