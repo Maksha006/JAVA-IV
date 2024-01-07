@@ -1,5 +1,6 @@
 package be.helb.smakani.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -29,14 +30,17 @@ public class Flight {
         this.status = status;
     }
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "itinerary_id")
     private Itinerary itinerary;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "origin_destination_id")
     private Destination originDestination;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "target_destination_id")
     private Destination targetDestination;

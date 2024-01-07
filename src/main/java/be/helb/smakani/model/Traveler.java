@@ -1,5 +1,6 @@
 package be.helb.smakani.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -23,6 +24,7 @@ public class Traveler {
     @Column(nullable = false, length = 50)
     private String email;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "traveler")
     List<CheckIn> checkIns;
 

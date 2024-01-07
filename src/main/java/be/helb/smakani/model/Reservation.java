@@ -1,5 +1,6 @@
 package be.helb.smakani.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -23,6 +24,7 @@ public class Reservation {
 
     private String bookingNumber;
 
+    @JsonIgnore
     @OneToOne
     @JoinColumn(name = "itinerary_id")
     private Itinerary itinerary;

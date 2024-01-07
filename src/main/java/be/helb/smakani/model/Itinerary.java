@@ -1,5 +1,6 @@
 package be.helb.smakani.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -30,6 +31,7 @@ public class Itinerary {
         this.flights = flights;
     }
 
+    @JsonIgnore
     @OneToMany(mappedBy = "itinerary")
     List<Flight> flights;
 
