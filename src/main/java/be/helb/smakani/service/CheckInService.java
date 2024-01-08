@@ -2,7 +2,6 @@ package be.helb.smakani.service;
 
 import be.helb.smakani.Repository.CheckInRepository;
 import be.helb.smakani.model.CheckIn;
-import be.helb.smakani.model.Flight;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,11 +21,11 @@ public class CheckInService {
         return checkInRepository.findAll();
     }
 
-    List<CheckIn> findByTravelerId(Long TravelerId){
+    public List<CheckIn> findByTravelerId(Long TravelerId){
         return checkInRepository.findByTravelerId(TravelerId);
     }
 
-    CheckIn findBytTicketNumber(String ticketNumber){
+    public CheckIn findByTicketNumber(String ticketNumber){
         return checkInRepository.findBytTicketNumber(ticketNumber);
     }
 

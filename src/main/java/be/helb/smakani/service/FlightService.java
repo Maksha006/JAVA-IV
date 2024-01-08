@@ -22,14 +22,14 @@ public class FlightService {
         return flightRepository.findAll();
     }
 
-    List<Flight> findByTargetDestinationId(Long destinationId){
+    public List<Flight> findByTargetDestinationId(Long destinationId){
         return flightRepository.findByTargetDestinationId(destinationId);
     }
-    List<Flight> findByItineraryId(Long itineraryId){
+    public List<Flight> findByItineraryId(Long itineraryId){
         return flightRepository.findByItineraryId(itineraryId);
     }
 
-    List<Flight> findByStatus(String status){
+    public List<Flight> findByStatus(String status){
         return flightRepository.findByStatus(status);
     }
 

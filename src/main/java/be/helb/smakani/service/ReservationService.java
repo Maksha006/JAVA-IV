@@ -22,7 +22,7 @@ public class ReservationService {
         return reservationRepository.findAll();
     }
 
-    Optional<Reservation> findById(Long id) {
+    public Optional<Reservation> findById(Long id) {
         return reservationRepository.findById(id);
     }
 

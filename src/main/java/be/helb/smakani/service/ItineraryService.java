@@ -2,9 +2,11 @@ package be.helb.smakani.service;
 
 import be.helb.smakani.Repository.ItineraryRepository;
 import be.helb.smakani.model.Itinerary;
+import be.helb.smakani.model.Traveler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -21,11 +23,11 @@ public class ItineraryService {
         return itineraryRepository.findAll();
     }
 
-    Itinerary findByDepartureDate(String departureDate){
-        return itineraryRepository.findByDepartureDate(departureDate);
+    public List<Itinerary> findByDepartureDate(String departureDate){
+        return itineraryRepository.findByDepartureDate(LocalDate.parse(departureDate));
     }
 
-    Itinerary findItinerariesByTravelerId(Long travelerId){
+    public List<Itinerary> findItinerariesByTravelerId(Traveler travelerId){
         return itineraryRepository.findItinerariesByTravelerId(travelerId);
     }
 
