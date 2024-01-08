@@ -20,7 +20,7 @@ public class CheckInController {
         this.checkInService = checkInService;
     }
 
-    @GetMapping("/allCheckins")
+    @GetMapping("/allcheckins")
     public List<CheckIn> findAllCheckIns() {
         return checkInService.findAll();
     }

@@ -28,10 +28,11 @@ public class Traveler {
     @OneToMany(mappedBy = "traveler")
     List<CheckIn> checkIns;
 
-    public Traveler(Long id, String lastName, String firstName) {
+    public Traveler(Long id, String lastName, String firstName, String email) {
         this.id = id;
         this.lastName = lastName;
         this.firstName = firstName;
+        this.email = email;
     }
 
     public Traveler() {

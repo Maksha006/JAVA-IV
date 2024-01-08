@@ -26,7 +26,7 @@ public class CheckInService {
     }
 
     public CheckIn findByTicketNumber(String ticketNumber){
-        return checkInRepository.findBytTicketNumber(ticketNumber);
+        return checkInRepository.findByTicketNumber(ticketNumber);
     }
 
     public void delete(Long id) {
